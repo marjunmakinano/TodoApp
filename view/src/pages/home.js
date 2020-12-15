@@ -124,7 +124,7 @@ class home extends Component {
 					<AppBar position="fixed" className={classes.appBar}>
 						<Toolbar>
 							<Typography variant="h6" noWrap>
-								TodoApp
+								ToneTip
 							</Typography>
 						</Toolbar>
 					</AppBar>
@@ -151,7 +151,7 @@ class home extends Component {
 									{' '}
 									<NotesIcon />{' '}
 								</ListItemIcon>
-								<ListItemText primary="Todo" />
+								<ListItemText primary="Dashboard" />
 							</ListItem>
 
 							<ListItem button key="Account" onClick={this.loadAccountPage}>
