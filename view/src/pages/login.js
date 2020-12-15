@@ -78,7 +78,9 @@ class login extends Component {
 			email: this.state.email,
 			password: this.state.password
 		};
-		axios
+		this.setState({ loading: false });
+		this.props.history.push('/');
+		/* axios
 			.post('/login', userData)
 			.then((response) => {
 				localStorage.setItem('AuthToken', `Bearer ${response.data.token}`);
@@ -92,7 +94,7 @@ class login extends Component {
 					errors: error.response.data,
 					loading: false
 				});
-			});
+			}); */
 	};
 
 	render() {

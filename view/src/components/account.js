@@ -81,7 +81,16 @@ class account extends Component {
 		authMiddleWare(this.props.history);
 		const authToken = localStorage.getItem('AuthToken');
 		axios.defaults.headers.common = { Authorization: `${authToken}` };
-		axios
+		this.setState({
+			firstName: 'Daniel',
+			lastName: 'Seemiller',
+			email: 'danielseemiller@gmail.com',
+			phoneNumber: '+631457660861',
+			country: 'USA',
+			username: 'daniel',
+			uiLoading: false
+		});
+		/* axios
 			.get('/user')
 			.then((response) => {
 				console.log(response.data);
@@ -101,7 +110,7 @@ class account extends Component {
 				}
 				console.log(error);
 				this.setState({ errorMsg: 'Error in retrieving the data' });
-			});
+			}); */
 	};
 
 	handleChange = (event) => {

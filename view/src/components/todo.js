@@ -104,7 +104,7 @@ class todo extends Component {
 			todoId: '',
 			errors: [],
 			open: false,
-			uiLoading: true,
+			uiLoading: false,
 			buttonType: '',
 			viewOpen: false
 		};
@@ -325,38 +325,6 @@ class todo extends Component {
 							</Grid>
 						</form>
 					</Dialog>
-
-					<Grid container spacing={2}>
-						{this.state.todos.map((todo) => (
-							<Grid item xs={12} sm={6}>
-								<Card className={classes.root} variant="outlined">
-									<CardContent>
-										<Typography variant="h5" component="h2">
-											{todo.title}
-										</Typography>
-										<Typography className={classes.pos} color="textSecondary">
-											{dayjs(todo.createdAt).fromNow()}
-										</Typography>
-										<Typography variant="body2" component="p">
-											{`${todo.body.substring(0, 65)}`}
-										</Typography>
-									</CardContent>
-									<CardActions>
-										<Button size="small" color="primary" onClick={() => this.handleViewOpen({ todo })}>
-											{' '}
-											View{' '}
-										</Button>
-										<Button size="small" color="primary" onClick={() => this.handleEditClickOpen({ todo })}>
-											Edit
-										</Button>
-										<Button size="small" color="primary" onClick={() => this.deleteTodoHandler({ todo })}>
-											Delete
-										</Button>
-									</CardActions>
-								</Card>
-							</Grid>
-						))}
-					</Grid>
 
 					<Dialog
 						onClose={handleViewClose}
