@@ -69,3 +69,5 @@ functions/util/config.js
 functions/package-lock.json
 functions/package-lock.json
 functions/package-lock.json
+
+.DS_Store
