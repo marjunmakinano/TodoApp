@@ -11,6 +11,8 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
 import TextField from '@material-ui/core/TextField';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -274,7 +276,7 @@ class todo extends Component {
 									<CloseIcon />
 								</IconButton>
 								<Typography variant="h6" className={classes.title}>
-									{this.state.buttonType === 'Edit' ? 'Edit Todo' : 'Create a new Todo'}
+									{this.state.buttonType === 'Edit' ? 'Edit Todo' : 'Create'}
 								</Typography>
 								<Button
 									autoFocus
@@ -295,7 +297,7 @@ class todo extends Component {
 										required
 										fullWidth
 										id="todoTitle"
-										label="Todo Title"
+										label="Filename"
 										name="title"
 										autoComplete="todoTitle"
 										helperText={errors.title}
@@ -309,18 +311,105 @@ class todo extends Component {
 										variant="outlined"
 										required
 										fullWidth
-										id="todoDetails"
-										label="Todo Details"
-										name="body"
-										autoComplete="todoDetails"
-										multiline
-										rows={25}
-										rowsMax={25}
-										helperText={errors.body}
-										error={errors.body ? true : false}
+										id="todoTitle"
+										label="Heading"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
 										onChange={this.handleChange}
-										value={this.state.body}
 									/>
+								</Grid>
+								<Grid item xs={12}>
+									<TextField
+										variant="outlined"
+										required
+										fullWidth
+										id="todoTitle"
+										label="Broadcaster"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
+										onChange={this.handleChange}
+									/>
+								</Grid>
+								<Grid item xs={12}>
+									<Select
+          								variant="outlined"
+										required
+										fullWidth
+										id="todoTitle"
+										label="Frequency"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
+										onChange={this.handleChange}
+        							>
+          								<MenuItem>14k</MenuItem>
+          								<MenuItem>19k</MenuItem>
+        							</Select>
+								</Grid>
+								<Grid item xs={12}>
+									<Select
+          								variant="outlined"
+										required
+										fullWidth
+										id="todoTitle"
+										label="Command 1"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
+										onChange={this.handleChange}
+        							>
+          								<MenuItem>Web</MenuItem>
+          								<MenuItem>Phone</MenuItem>
+          								<MenuItem>Location</MenuItem>
+        							</Select>
+								</Grid>
+								<Grid item xs={12}>
+									<Select
+          								variant="outlined"
+										required
+										fullWidth
+										id="todoTitle"
+										label="Command 2"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
+										onChange={this.handleChange}
+        							>
+          								<MenuItem>Web</MenuItem>
+          								<MenuItem>Phone</MenuItem>
+          								<MenuItem>Location</MenuItem>
+        							</Select>
+								</Grid>
+								<Grid item xs={12}>
+									<Select
+          								variant="outlined"
+										required
+										fullWidth
+										id="todoTitle"
+										label="Command 3"
+										name="title"
+										autoComplete="todoTitle"
+										helperText={errors.title}
+										value={this.state.title}
+										error={errors.title ? true : false}
+										onChange={this.handleChange}
+        							>
+          								<MenuItem>Web</MenuItem>
+          								<MenuItem>Phone</MenuItem>
+          								<MenuItem>Location</MenuItem>
+        							</Select>
 								</Grid>
 							</Grid>
 						</form>
